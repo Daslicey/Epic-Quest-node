@@ -1,11 +1,12 @@
 console.log("Welcome To the Epic quest of adventure!");
+
 process.stdin.resume();
 process.stdin.setEncoding('utf8');
- 
  
 process.stdin.on('data', function (chunk) {
  process.stdout.write('data: ' + chunk);
 });
+
 function ask(question, format, callback) {
  var stdin = process.stdin, stdout = process.stdout;
  
@@ -23,12 +24,9 @@ function ask(question, format, callback) {
    }
  });
 }
-ask("You awaken in a town, there are 2 roads, north and south. wich way do you want to go?", /.+/, function(road1) {
-    console.log("You went",road1, "and continued the road untill you reached a well");
 
+ask("You arrive in a small town with two roads, north and south, wich way do you want to go?", /.+/, function(road1) {
+    console.log("You went",road1 ,"you followed the path and saw a big dark cave");
+ 
     process.exit();
   });
-  console.log("You look down the well and see a bucket, there is a sword in it!")
-
-  
-console.log("sequel is available as DLC for just $50 each episode");
